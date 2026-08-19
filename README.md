@@ -20,8 +20,8 @@
 
 1. **Клонируйте репозиторий**:
    ```bash
-   git clone https://github.com/ВАШ_НИК/qr-code-generator.git
-   cd qr-code-generator
+   git clone https://github.com/Rozza1337/QR-code-generator.git
+   cd QR-code-generator
    ```
 
 2. **Создайте и активируйте виртуальное окружение (рекомендуется)**:
@@ -78,7 +78,7 @@ python qr_generator.py -d "Привет, мир!" -o custom.png --color navy --b
 ## 🛠️ Структура проекта
 
 ```text
-qr-code-generator/
+QR-code-generator/
 │
 ├── qr_generator.py     # Основной исходный код
 ├── requirements.txt    # Список необходимых библиотек
@@ -89,24 +89,7 @@ qr-code-generator/
 
 ---
 
-## 📤 Как опубликовать на GitHub
-
-1. Инициализируйте Git и сделайте первый коммит:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: QR code generator"
-   ```
-2. Создайте новый репозиторий на [GitHub.com](https://github.com/new).
-3. Привяжите удаленный репозиторий и отправьте код:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/ВАШ_НИК/ИМЯ_РЕПОЗИТОРИЯ.git
-   git push -u origin main
-   ```
-
----
-
 ## 📄 Лицензия
 
 Проект распространяется под лицензией [MIT](LICENSE).
+
