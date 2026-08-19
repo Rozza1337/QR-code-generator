@@ -1,0 +1,112 @@
+# 📱 Python QR Code Generator
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Простой, легкий и стильный генератор QR-кодов на Python. Поддерживает как **интерактивный режим** для начинающих, так и запуск через **аргументы командной строки (CLI)** с настройкой цветов и размеров.
+
+---
+
+## ✨ Возможности
+
+- 🚀 **Два режима работы**: пошаговый интерактивный диалог или быстрый запуск через CLI.
+- 🎨 **Кастомизация**: выбор цвета QR-кода и цвета фона (например, `red`, `blue`, `#3498db`).
+- 📏 **Настройка размера**: изменение разрешения и размера пикселя.
+- 🛡️ **Высокая отказоустойчивость**: кодирование по стандарту `ERROR_CORRECT_H` (~30% повреждений или загрязнений восстанавливаются).
+
+---
+
+## 📦 Установка
+
+1. **Клонируйте репозиторий**:
+   ```bash
+   git clone https://github.com/ВАШ_НИК/qr-code-generator.git
+   cd qr-code-generator
+   ```
+
+2. **Создайте и активируйте виртуальное окружение (рекомендуется)**:
+   ```bash
+   # Windows:
+   python -m venv venv
+   .\venv\Scripts\activate
+
+   # Linux / macOS:
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Установите зависимости**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 🚀 Использование
+
+### 1. Интерактивный режим (самый простой)
+Просто запустите скрипт без параметров:
+```bash
+python qr_generator.py
+```
+Программа сама спросит текст/ссылку, имя файла и желаемые цвета.
+
+---
+
+### 2. Режим командной строки (CLI)
+Сгенерировать стандартный QR-код:
+```bash
+python qr_generator.py -d "https://github.com" -o my_qr.png
+```
+
+Сгенерировать цветной QR-код с фоном и увеличенным размером:
+```bash
+python qr_generator.py -d "Привет, мир!" -o custom.png --color navy --bg lightyellow --size 15
+```
+
+#### Доступные параметры:
+| Флаг | Описание | По умолчанию |
+| :--- | :--- | :--- |
+| `-d`, `--data` | Текст или ссылка | *(обязательно для CLI)* |
+| `-o`, `--output`| Имя сохраняемого файла | `qrcode.png` |
+| `--color` | Цвет точек кода (название цвета или HEX) | `black` |
+| `--bg` | Цвет фона (название цвета или HEX) | `white` |
+| `--size` | Размер каждой точки в пикселях | `10` |
+
+---
+
+## 🛠️ Структура проекта
+
+```text
+qr-code-generator/
+│
+├── qr_generator.py     # Основной исходный код
+├── requirements.txt    # Список необходимых библиотек
+├── .gitignore          # Исключение временных файлов из git
+├── LICENSE             # Лицензия MIT
+└── README.md           # Документация проекта
+```
+
+---
+
+## 📤 Как опубликовать на GitHub
+
+1. Инициализируйте Git и сделайте первый коммит:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: QR code generator"
+   ```
+2. Создайте новый репозиторий на [GitHub.com](https://github.com/new).
+3. Привяжите удаленный репозиторий и отправьте код:
+   ```bash
+   git branch -M main
+   git remote add origin https://github.com/ВАШ_НИК/ИМЯ_РЕПОЗИТОРИЯ.git
+   git push -u origin main
+   ```
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией [MIT](LICENSE).
